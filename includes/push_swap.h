@@ -25,12 +25,17 @@ typedef struct s_stack
 	int				cost_a;
 	int				cost_b;
 	struct s_stack *next;
-	struct s_stack *prev;
 }					t_stack;
 
 void		ft_error(void);
 void		is_sign(char c);
-int	ft_is_duplicated(char **args);
-void	ft_parsing(char **args);
-void    free_arr(char **args);
-int	ft_is_intfull(char *str);
+int			ft_is_duplicated(char **args);
+void		ft_parsing(char **args);
+void    	free_arr(char **args);
+int			ft_is_intfull(char *str);
+char    	**ft_parsing_stack(char **av);
+void    ft_lst_add_back(t_stack **stack, t_stack *new);
+int ft_size(t_stack *stack);
+t_stack *ft_lst_new(int value);
+t_stack	*ft_last(t_stack *stack);
+t_stack	*ft_before_last(t_stack *stack);

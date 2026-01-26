@@ -22,46 +22,46 @@ int	ft_is_intfull(char *str)
 	return (1);
 }
 
-static int	ft_valid_args(char **args)
+static int	ft_valid_args(char **av)
 {
     int	i;
 	int	j;
 
 	i = 0;
-	while (args[i])
+	while (av[i])
 	{
 		j = 0;
-		if (is_sign(args[i][j]))
+		if (is_sign(av[i][j]))
 		{
 			j++;
-			if(!args[i][j])
+			if(!av[i][j])
 				return (0);
 		}
-		while (args[i][j])
+		while (av[i][j])
 		{
-			if (!ft_isdigit(args[i][j]))
+			if (!ft_isdigit(av[i][j]))
 				return (0);
 			j++;
 		}
-		if (!ft_is_intfull(args[i]))
+		if (!ft_is_intfull(av[i]))
 			return (0);
 		i++;
 	}
 	return (1);
 }
 
-int	ft_is_duplicated(char **args)
+int	ft_is_duplicated(char **av)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while(args[i])
+	while(av[i])
 	{
 		j = i + 1;
-		while (args[j])
+		while (av[j])
 		{
-			if (ft_atol(args[i]) == ft_atol(args[j]))
+			if (ft_atol(av[i]) == ft_atol(av[j]))
 				return (0);
 			j++;
 		}
@@ -70,17 +70,17 @@ int	ft_is_duplicated(char **args)
 	return (1);
 }
 
-void	ft_parsing(char **args)
+void	ft_parsing(char **av)
 {
-	if(!ft_valid_args(args))
+	if(!ft_valid_args(av))
 	{
-		free_arr(args);
+		free_arr(av);
 		ft_error();
 		exit(1);
 	}
-	if (!ft_is_duplicated(args))
+	if (!ft_is_duplicated(av))
 	{
-		free_arr(args);
+		free_arr(av);
 		ft_error();
 		exit(1);
 	}

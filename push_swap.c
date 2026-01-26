@@ -24,5 +24,9 @@ int main(int ac, char **av)
 	if (ac > 1)
 	{
 		str = ft_parsing_stack(av);
+		ft_parsing(str);
+		ft_fill_stack(str, &stack_a);
+		free_arr(str);
+		ft_index_stack(stack_a, ft_size(stack_a));
 	}
 }
