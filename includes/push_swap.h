@@ -27,6 +27,9 @@ typedef struct s_stack
 	struct s_stack *next;
 }					t_stack;
 
+void    	ft_sa(t_stack **stack_a);
+void    	ft_sb(t_stack **stack_b);
+void    	ft_ss(t_stack **stack_a, t_stack **stack_b);
 void		ft_error(void);
 void		is_sign(char c);
 int			ft_is_duplicated(char **args);
@@ -39,3 +42,5 @@ int ft_size(t_stack *stack);
 t_stack *ft_lst_new(int value);
 t_stack	*ft_last(t_stack *stack);
 t_stack	*ft_before_last(t_stack *stack);
+int ft_is_sorted(t_stack *stack);
+int ft_find_high(t_stack *stack);
