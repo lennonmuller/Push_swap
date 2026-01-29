@@ -56,4 +56,7 @@ t_stack	*ft_last(t_stack *stack)
 
 t_stack	*ft_before_last(t_stack *stack)
 {
+	while (stack && stack->next && stack->next->next)
+		stack = stack->next;
+	return (stack);
 }

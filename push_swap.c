@@ -18,6 +18,8 @@ static void	ft_push_swap(t_stack **stack_a, t_stack **stack_b, int size)
 		ft_sa(stack_a);
 	else if (size == 3 && !ft_is_sorted(*stack_a))
 		ft_sort_three(stack_a);
+	else if (size > 3 && !ft_is_sorted(*stack_a))
+		ft_sort(stack_a, stack_b);
 }
 
 
