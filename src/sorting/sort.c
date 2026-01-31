@@ -69,4 +69,9 @@ void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	ft_push_to_b(stack_a, stack_b);
 	ft_sort_three(stack_a);
+	while (*stack_b)
+	{
+		ft_assign_pos(stack_a, stack_b);
+		ft_cost(stack_a, stack_b);
+	}
 }
