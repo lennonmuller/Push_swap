@@ -34,3 +34,31 @@ void	ft_cost(t_stack **stack_a, t_stack **stack_b)
 		b_tmp = b_tmp->next;
 	}
 }
+
+void	ft_cheapest(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack *tmp;
+	int		cheapest;
+	int		a_cost;
+	int		b_cost;
+
+	a_cost = 0;
+	b_cost = 0;
+	if (!*stack_b)
+		return ;
+	cheapest = INT_MAX;
+	while (tmp)
+	{
+		if (ft_abs(tmp->cost_a) + ft_abs(tmp->cost_b) < cheapest)
+		{
+			cheapest = ft_abs(tmp->cost_a) + ft_abs(tmp->cost_b);
+			a_cost = tmp->cost_a;
+			b_cost = tmp->cost_b;
+		}
+		tmp = tmp->next;
+	}
+	if (cheapest != INT_MAX)
+		ft_best_move(stack_a, stack_b, a_cost, b_cost);
+	else
+		return ;
+}
