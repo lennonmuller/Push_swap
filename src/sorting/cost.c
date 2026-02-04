@@ -46,6 +46,7 @@ void	ft_cheapest(t_stack **stack_a, t_stack **stack_b)
 	b_cost = 0;
 	if (!*stack_b)
 		return ;
+	tmp = *stack_b;
 	cheapest = INT_MAX;
 	while (tmp)
 	{

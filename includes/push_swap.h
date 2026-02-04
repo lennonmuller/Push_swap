@@ -24,7 +24,7 @@ typedef struct s_stack
 	int				target;
 	int				cost_a;
 	int				cost_b;
-	struct s_stack *next;
+	struct s_stack	*next;
 }					t_stack;
 
 void		ft_sa(t_stack **stack_a);
@@ -35,6 +35,9 @@ void		ft_rb(t_stack **stack_b);
 void		ft_rr(t_stack **stack_a, t_stack **stack_b);
 void		ft_pa(t_stack **stack_a, t_stack **stack_b);
 void		ft_pb(t_stack **stack_a, t_stack **stack_b);
+void		ft_rra(t_stack **stack_a);
+void		ft_rrb(t_stack **stack_b);
+void		ft_rrr(t_stack **stack_a, t_stack **stack_b);
 void		ft_error(void);
 void		is_sign(char c);
 int			ft_is_duplicated(char **args);
@@ -49,3 +52,5 @@ t_stack		*ft_last(t_stack *stack);
 t_stack		*ft_before_last(t_stack *stack);
 int			ft_is_sorted(t_stack *stack);
 int			ft_find_high(t_stack *stack);
+void		ft_cost(t_stack **stack_a, t_stack **stack_b);
+void		ft_cheapest(t_stack **stack_a, t_stack **stack_b);

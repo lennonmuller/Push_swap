@@ -40,5 +40,7 @@ int main(int ac, char **av)
 		free_arr(str);
 		ft_index_stack(stack_a, ft_size(stack_a));
 		ft_push_swap(&stack_a, &stack_b, ft_size(stack_a));
+		ft_free_stack(&stack_a);
+		ft_free_stack(&stack_b);
 	}
 }

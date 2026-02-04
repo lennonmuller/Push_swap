@@ -71,5 +71,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_isspace(int c);
 long    ft_atol(const char *str);
+int		ft_abs(int n);
+int		ft_isspace(int c);
 
 #endif

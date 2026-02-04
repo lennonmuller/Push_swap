@@ -65,6 +65,31 @@ void	ft_sort_three(t_stack **stack_a)
 		ft_sa(stack_a);
 }
 
+static void	ft_stack_shift(t_stack **stack_a)
+{
+	int	size;
+	int	lowest;
+
+	size = ft_size(*stack_a);
+	lowest = ft_lowest_idx_pos(stack_a);
+	if (lowest > size / 2)
+	{
+		while (lowest < size)
+		{
+			ft_rra(stack_a);
+			lowest++;
+		}
+	}
+	else
+	{
+		while (lowest)
+		{
+			ft_ra(stack_a);
+			lowest--;
+		}
+	}
+}
+
 void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	ft_push_to_b(stack_a, stack_b);
@@ -73,5 +98,8 @@ void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 	{
 		ft_assign_pos(stack_a, stack_b);
 		ft_cost(stack_a, stack_b);
+		ft_cheapest(stack_a, stack_b);
 	}
+	if (!ft_is_sorted(*stack_a) && *stack_a)
+		ft_stack_shift(stack_a);
 }
