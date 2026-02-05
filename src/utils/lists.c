@@ -1,21 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lists.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmuler-f <lmuler-f@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/05 13:28:33 by lmuler-f          #+#    #+#             */
+/*   Updated: 2026/02/05 13:28:33 by lmuler-f         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
-void    ft_lst_add_back(t_stack **stack, t_stack *new)
+void	ft_lst_add_back(t_stack **stack, t_stack *new)
 {
-    t_stack *last;
+	t_stack	*last;
 
-    if (!new)
-        return ;
-    if (!*stack)
-    {
-        *stack = new;
-        return ;
-    }
-    last = ft_last(*stack);
-    last->next = new;
+	if (!new)
+		return ;
+	if (!*stack)
+	{
+		*stack = new;
+		return ;
+	}
+	last = ft_last(*stack);
+	last->next = new;
 }
 
-int ft_size(t_stack *stack)
+int	ft_size(t_stack *stack)
 {
 	int	size;
 
@@ -30,7 +42,7 @@ int ft_size(t_stack *stack)
 	return (size);
 }
 
-t_stack *ft_lst_new(int value)
+t_stack	*ft_lst_new(int value)
 {
 	t_stack	*new;
 

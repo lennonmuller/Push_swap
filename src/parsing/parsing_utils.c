@@ -12,12 +12,12 @@
 
 #include "../../includes/push_swap.h"
 
-void    ft_error(void)
+void	ft_error(void)
 {
-    fd_putstr_fd("Error\n", 2);
+	fd_putstr_fd("Error\n", 2);
 }
 
-void    ft_is_sign(char c)
+void	ft_is_sign(char c)
 {
-    return (c == '+' || c == '-');
+	return (c == '+' || c == '-');
 }

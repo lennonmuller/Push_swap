@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmuler-f <lmuler-f@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/05 12:47:55 by lmuler-f          #+#    #+#             */
+/*   Updated: 2026/02/05 12:47:55 by lmuler-f         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isspace(int c)
@@ -6,5 +18,5 @@ int	ft_isspace(int c)
 		return (true);
 	if (c == '\r' || c == '\f' || c == '\v')
 		return (true);
-    return (false);
+	return (false);
 }

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmuler-f <lmuler-f@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/05 12:57:41 by lmuler-f          #+#    #+#             */
+/*   Updated: 2026/02/05 12:57:41 by lmuler-f         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
 static void	ft_reverse_rotate(t_stack **stack)
 {
-	t_stack *tmp;
-	t_stack *last;
-	t_stack *before_last;
+	t_stack	*tmp;
+	t_stack	*last;
+	t_stack	*before_last;
 
 	if (!*stack || !(*stack)->next)
 		return ;

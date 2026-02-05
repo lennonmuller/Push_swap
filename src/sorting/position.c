@@ -29,7 +29,7 @@ void	ft_position(t_stack **stack)
 
 int	ft_find_high(t_stack *stack)
 {
-    int	high;
+	int	high;
 
 	high = INT_MIN;
 	while (stack)
@@ -44,8 +44,8 @@ int	ft_find_high(t_stack *stack)
 int	ft_lowest_idx_pos(t_stack **stack)
 {
 	t_stack	*tmp;
-	int	lowest_i;
-	int	lowest_p;
+	int		lowest_i;
+	int		lowest_p;
 
 	tmp = *stack;
 	lowest_i = INT_MAX;
@@ -104,7 +104,7 @@ void	ft_assign_pos(t_stack **stack_a, t_stack **stack_b)
 	ft_position(stack_b);
 	while (tmp)
 	{
-		target = ft_target(stack_a, tmp->index, INT_MAX, target); //procura o menor indice de A que seja maior que x em B.
+		target = ft_target(stack_a, tmp->index, INT_MAX, target);
 		tmp->target = target;
 		tmp = tmp->next;
 	}

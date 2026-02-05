@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_stack.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lmuler-f <lmuler-f@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/05 13:06:19 by lmuler-f          #+#    #+#             */
+/*   Updated: 2026/02/05 13:06:19 by lmuler-f         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
 static int	ft_has_only_spaces(char *s)
@@ -41,7 +53,7 @@ static char	*ft_join_args(char **av)
 		exit(1);
 	}
 	i = 1;
-	while(av[i])
+	while (av[i])
 	{
 		if (ft_has_only_spaces(av[i]))
 		{
@@ -56,13 +68,13 @@ static char	*ft_join_args(char **av)
 	return (tmp);
 }
 
-char    **ft_parsing_stack(char **av)
+char	**ft_parsing_stack(char **av)
 {
-    char    **str;
-    char    *s;
+	char	**str;
+	char	*s;
 
-    s = NULL;
-    s = ft_join_args(av);
+	s = NULL;
+	s = ft_join_args(av);
 	str = ft_split(s, ' ');
 	free(s);
 	return (str);

@@ -24,7 +24,7 @@ int	ft_is_intfull(char *str)
 
 static int	ft_valid_args(char **av)
 {
-    int	i;
+	int	i;
 	int	j;
 
 	i = 0;
@@ -34,7 +34,7 @@ static int	ft_valid_args(char **av)
 		if (ft_is_sign(av[i][j]))
 		{
 			j++;
-			if(!av[i][j])
+			if (!av[i][j])
 				return (0);
 		}
 		while (av[i][j])
@@ -56,7 +56,7 @@ int	ft_is_duplicated(char **av)
 	int	j;
 
 	i = 0;
-	while(av[i])
+	while (av[i])
 	{
 		j = i + 1;
 		while (av[j])
@@ -72,7 +72,7 @@ int	ft_is_duplicated(char **av)
 
 void	ft_parsing(char **av)
 {
-	if(!ft_valid_args(av))
+	if (!ft_valid_args(av))
 	{
 		free_arr(av);
 		ft_error();

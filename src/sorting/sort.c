@@ -12,15 +12,15 @@
 
 #include "../../includes/push_swap.h"
 
-int ft_is_sorted(t_stack *stack)
+int	ft_is_sorted(t_stack *stack)
 {
-    while (stack && stack->next)
-    {
-        if (stack->value > stack->next->value)
-            return (0);
-        stack = stack->next;
-    }
-    return (1);
+	while (stack && stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }
 
 static void	ft_push_to_b(t_stack **stack_a, t_stack **stack_b)
@@ -52,13 +52,13 @@ static void	ft_push_to_b(t_stack **stack_a, t_stack **stack_b)
 
 void	ft_sort_three(t_stack **stack_a)
 {
-    int	high;
+	int	high;
 
 	if (ft_is_sorted(*stack_a))
 		return ;
 	high = ft_find_high(*stack_a);
-    if ((*stack_a)->value == high)
-        ft_ra(stack_a);
+	if ((*stack_a)->value == high)
+		ft_ra(stack_a);
 	else if ((*stack_a)->next->value == high)
 		ft_rra(stack_a);
 	if ((*stack_a)->value > (*stack_a)->next->value)

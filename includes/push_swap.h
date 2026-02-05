@@ -21,7 +21,7 @@
 
 typedef struct s_stack
 {
-    int				value;
+	int				value;
 	int				index;
 	int				pos;
 	int				target;
@@ -70,3 +70,5 @@ int		ft_target(t_stack **stack_a, int b_index, int target_index,
 			int target_pos);
 void	ft_assign_pos(t_stack **stack_a, t_stack **stack_b);
 void	ft_free_stack(t_stack **stack);
+
+#endif

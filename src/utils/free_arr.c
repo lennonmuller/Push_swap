@@ -12,15 +12,15 @@
 
 #include "../../includes/push_swap.h"
 
-void    free_arr(char **args)
+void	free_arr(char **args)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (args[i])
-    {
-        free(args[i]);
-        i++;
-    }
-    free(args);
+	i = 0;
+	while (args[i])
+	{
+		free(args[i]);
+		i++;
+	}
+	free(args);
 }
