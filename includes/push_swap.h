@@ -42,7 +42,7 @@ void	ft_rra(t_stack **stack_a);
 void	ft_rrb(t_stack **stack_b);
 void	ft_rrr(t_stack **stack_a, t_stack **stack_b);
 void	ft_error(void);
-void	ft_is_sign(char c);
+int		ft_is_sign(char c);
 int		ft_is_duplicated(char **args);
 void	ft_fill_stack(char **str, t_stack **stack);
 void	ft_index_stack(t_stack *stack_a, int size);

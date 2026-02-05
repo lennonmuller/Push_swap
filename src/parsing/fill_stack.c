@@ -21,14 +21,14 @@ void	ft_fill_stack(char **str, t_stack **stack)
 	i = 0;
 	while (str[i])
 	{
-		value = ft_atol(str[i]);
-		if (!ft_is_intfull(value))
+		if (!ft_is_intfull(str[i]))
 		{
 			free_arr(str);
 			ft_error();
 			ft_free_stack(stack);
 			exit(1);
 		}
+		value = ft_atol(str[i]);
 		ft_lst_add_back(stack, ft_lst_new((int)value));
 		i++;
 	}

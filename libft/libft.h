@@ -19,6 +19,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <string.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
@@ -72,6 +73,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_isspace(int c);
 long	ft_atol(const char *str);
 int		ft_abs(int n);
-int		ft_isspace(int c);
 
 #endif

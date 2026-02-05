@@ -22,6 +22,8 @@ static void	ft_rotate(t_stack **stack)
 	tmp = *stack;
 	*stack = (*stack)->next;
 	last = ft_last(*stack);
+	tmp->next = NULL;
+	last->next = tmp;
 }
 
 void	ft_ra(t_stack **stack_a)
@@ -40,5 +42,5 @@ void	ft_rr(t_stack **stack_a, t_stack **stack_b)
 {
 	ft_rotate(stack_a);
 	ft_rotate(stack_b);
-	ft_putstr_fd("rr\n");
+	ft_putstr_fd("rr\n", 1);
 }

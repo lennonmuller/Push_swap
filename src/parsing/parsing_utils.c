@@ -14,10 +14,10 @@
 
 void	ft_error(void)
 {
-	fd_putstr_fd("Error\n", 2);
+	ft_putstr_fd("Error\n", 2);
 }
 
-void	ft_is_sign(char c)
+int	ft_is_sign(char c)
 {
 	return (c == '+' || c == '-');
 }
