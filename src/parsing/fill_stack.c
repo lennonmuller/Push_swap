@@ -1,9 +1,9 @@
 #include "../../includes/push_swap.h"
 
-void    ft_fill_stack(char **str, t_stack **stack)
+void	ft_fill_stack(char **str, t_stack **stack)
 {
-    long int    value;
-    int         i;
+    long int	value;
+    int			i;
 
     *stack = NULL;
     i = 0;

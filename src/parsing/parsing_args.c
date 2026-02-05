@@ -31,7 +31,7 @@ static int	ft_valid_args(char **av)
 	while (av[i])
 	{
 		j = 0;
-		if (is_sign(av[i][j]))
+		if (ft_is_sign(av[i][j]))
 		{
 			j++;
 			if(!av[i][j])

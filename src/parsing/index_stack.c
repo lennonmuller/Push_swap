@@ -1,10 +1,10 @@
 #include "../../includes/push_swap.h"
 
-void    ft_index_stack(t_stack *stack_a, int size)
+void	ft_index_stack(t_stack *stack_a, int size)
 {
-    t_stack *current;
-    t_stack *high_node;
-    int     max_value;
+    t_stack	*current;
+    t_stack	*high_node;
+    int		max_value;
 
     while (size-- > 0)
     {

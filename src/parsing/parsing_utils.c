@@ -17,7 +17,7 @@ void    ft_error(void)
     fd_putstr_fd("Error\n", 2);
 }
 
-void    is_sign(char c)
+void    ft_is_sign(char c)
 {
     return (c == '+' || c == '-');
 }

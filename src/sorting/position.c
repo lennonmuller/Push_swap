@@ -27,7 +27,7 @@ void	ft_position(t_stack **stack)
 	}
 }
 
-int ft_find_high(t_stack *stack)
+int	ft_find_high(t_stack *stack)
 {
     int	high;
 
@@ -63,7 +63,8 @@ int	ft_lowest_idx_pos(t_stack **stack)
 	return (lowest_p);
 }
 
-int	ft_target(t_stack **stack_a, int b_index, int target_index, int target_pos)
+int	ft_target(t_stack **stack_a, int b_index, int target_index,
+				int target_pos)
 {
 	t_stack	*tmp;
 
