@@ -42,7 +42,6 @@ SRC = src/operations/push.c \
 
 OBJ = $(SRC:.c=.o)
 
-
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJ)
