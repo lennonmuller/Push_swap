@@ -17,7 +17,7 @@ int	ft_is_intfull(char *str)
 	long	num;
 
 	num = ft_atol(str);
-	if (num > 2147483647 || num < -2174483648)
+	if (num > 2147483647 || num < -2147483648)
 		return (0);
 	return (1);
 }
