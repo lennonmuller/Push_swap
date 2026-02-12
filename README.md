@@ -5,6 +5,12 @@
 ## Description
 `push_swap` is a core algorithmic project from the 42 curriculum focused on sorting integers using a highly constrained environment. The program must sort a stack of integers using **two stacks (A and B)** and a **restricted set of operations**, while producing the **smallest possible number of moves**.
 
+### Allowed Operations
+-  `sa`, `sb`, `ss` : (swap) the first two elements of one or both stacks
+-  `pa`, `pb` : (push) the first element of the stack to the other stack `pa`=`b->a` / `pb`= `a->b`
+-  `ra`, `rb`, `rr` : (rotate) the first element to the last position of one or both stacks
+-  `rra`, `rrb`, `rrr` : (reverse rotate) - rotate the last element to the first position of one or both stacks
+
 This project emphasizes **algorithmic thinking**, **complexity analysis**, and **optimization under constraints**, rather than raw sorting itself.
 
 ## Core Concepts
@@ -66,11 +72,24 @@ The program outputs a sequence of instructions that sorts the stack.
 ./push_swap 2 1 3
 sa
 ```
-### Checker Usage
+### Usign the 42 oficial checker
+```
+chmod +x checker_linux
+```
 ```bash
-ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_linux.sh $ARG
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_linux $ARG
 ```
 If the output is `OK`, the sorting instructions are correct.
+
+### Push_Swap Tester
+-  We also can use a ready tester by gemartin:
+```bash
+git clone https://github.com/gemartin99/Push-Swap-Tester
+```
+```
+run:
+$>  bash push_swap_checker_linux.sh
+```
 
 ## Error Handling
 
@@ -79,6 +98,12 @@ The program prints `Error\n` to the stderr when:
 -	Executes them on the stacks
 -	Outputs `OK` if stack A is sorted and B is empty, otherwise `KO`
 
+### Leaks Verification
+Example:
+```bash
+valgrind --leak-check=full --show-leak-kinds=all ./push_swap "2 1 3 6 5 8"
+```
+
 ## Resources
 During this project, external resources were used to reinforce understanding of algorithms and memory behavior.
 
@@ -86,6 +111,7 @@ Links:
 
 -	[Stacks Understanding](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 -	[Blog of a 42 Student - A. Yigit Ogun](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
+-  [Turkish Algorithm in 6 steps](https://pure-forest.medium.com/push-swap-turk-algorithm-explained-in-6-steps-4c6650a458c0)
 -	[Youtube Video](https://www.youtube.com/watch?v=wRvipSG4Mmk&t=1s)
 
 ## AI Usage
@@ -105,4 +131,4 @@ This project was essential for developing:
 
 #
 
-Thank you for taking the time to read this README until here :D
+###### Thank you for taking the time to read this README until here :D
