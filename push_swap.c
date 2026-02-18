@@ -42,4 +42,5 @@ int	main(int ac, char **av)
 		ft_free_stack(&stack_a);
 		ft_free_stack(&stack_b);
 	}
+	return (0);
 }
