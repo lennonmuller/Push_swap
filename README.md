@@ -104,6 +104,13 @@ Example:
 valgrind --leak-check=full --show-leak-kinds=all ./push_swap "2 1 3 6 5 8"
 ```
 
+## Fluxogram
+
+This is the flowchart that represents how my `push_swap` works.
+I wrote it in Portuguese, but the logic is clear enough to understand even if you don’t speak the language.
+
+![Fluxogram Push_swap](fluxograma/fluxogram.png)
+
 ## Resources
 During this project, external resources were used to reinforce understanding of algorithms and memory behavior.
 
